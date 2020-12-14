@@ -1,0 +1,28 @@
+@startuml
+class customer.n.1{
+}
+class customer.n.1#hobby.n.1{
+}
+class customer.n.1#score.n.1{
+}
+class merchant.n.1{
+}
+class merchant.n.1#interface.n.2{
+}
+class commodity.n.1{
+}
+class administrator.n.1{
+}
+class customer.n.1#system.n.1{
+}
+
+customer.n.1#hobby.n.1 --|> customer.n.1
+customer.n.1#score.n.1 --|> customer.n.1
+customer.n.1 -- customer.n.1#system.n.1
+customer.n.1#system.n.1  -- administrator.n.1
+merchant.n.1#interface.n.2 -- administrator.n.1
+merchant.n.1 -- merchant.n.1#interface.n.2
+commodity.n.1 --* merchant.n.1 
+customer.n.1 -- merchant.n.1
+@enduml
+ 

@@ -1,0 +1,22 @@
+@startuml
+class doctor.n.1{
+}
+class department.n.1{
+}
+class patient.n.1{
+}
+class room.n.1{
+}
+class bill.n.2{
+}
+class receptionist.n.1{
+}
+
+doctor.n.1 --* department.n.1
+patient.n.1 -- doctor.n.1
+patient.n.1 -- room.n.1
+patient.n.1 -- receptionist.n.1
+patient.n.1 -- bill.n.2
+receptionist.n.1 -- bill.n.2
+
+@enduml

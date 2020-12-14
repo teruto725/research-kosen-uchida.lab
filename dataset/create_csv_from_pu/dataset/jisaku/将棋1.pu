@@ -1,0 +1,27 @@
+@startuml
+class model.n.9{
+}
+class controller.n.3{
+
+}
+class view.n.10{
+
+}
+class hand.n.6#piece.n.13{
+
+}
+class gameboard.n.1{
+
+}
+class piece.n.13{
+
+}
+
+hand.n.6#piece.n.13 --* model.n.9
+gameboard.n.1 --* model.n.9
+piece.n.13 --* gameboard.n.1
+piece.n.13 --* hand.n.6#piece.n.13
+controller.n.3 -- model.n.9
+view.n.10 -- controller.n.3
+
+@enduml

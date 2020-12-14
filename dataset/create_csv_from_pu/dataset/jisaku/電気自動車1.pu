@@ -1,0 +1,20 @@
+@startuml
+class  driver.n.1{
+}
+class  pedal.n.2{
+}
+class accelerator.n.1 {
+}
+class brake_pedal.n.1{
+}
+class speedometer.n.1{
+}
+class automobile_engine.n.1{
+}
+driver.n.1 -- speedometer.n.1
+driver.n.1 -- pedal.n.2
+pedal.n.2 -- automobile_engine.n.1
+speedometer.n.1 -- automobile_engine.n.1
+accelerator.n.1 --|> pedal.n.2
+brake_pedal.n.1 --|> pedal.n.2
+@enduml

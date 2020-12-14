@@ -1,0 +1,21 @@
+@startuml
+class player.n.1{
+}
+class gameboard.n.1{
+}
+class dice.n.1{
+
+}
+class goal.n.1#square.n.7{
+}
+class start.n.1#square.n.7{
+}
+class piece.n.13{
+
+}
+player.n.1 -- gameboard.n.1
+player.n.1 -- dice.n.1
+gameboard.n.1 -- piece.n.13
+goal.n.1#square.n.7 --|> piece.n.13
+start.n.1#square.n.7 --|> piece.n.13
+@enduml

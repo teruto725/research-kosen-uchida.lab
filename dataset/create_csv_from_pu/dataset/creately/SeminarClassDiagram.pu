@@ -1,0 +1,25 @@
+@startuml
+class person.n.1{
+}
+class address.n.2{
+}
+class student.n.1{
+}
+class professor.n.1{
+}
+class seminar.n.2{
+}
+class seminar.n.2#enrollment.n.2{
+}
+class course.n.1{
+}
+
+address.n.2 --* person.n.1
+student.n.1 --|> person.n.1
+professor.n.1 --|> person.n.1
+student.n.1 --* seminar.n.2
+student.n.1 -- seminar.n.2#enrollment.n.2
+seminar.n.2#enrollment.n.2 -- seminar.n.2
+professor.n.1 --* seminar.n.2
+seminar.n.2 -- course.n.1
+@enduml

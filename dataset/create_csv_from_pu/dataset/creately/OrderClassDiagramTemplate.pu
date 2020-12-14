@@ -1,0 +1,27 @@
+@startuml
+class order.n.7{
+}
+class client.n.2{
+}
+class corporation.n.1#client.n.2{
+}
+class individual.n.1#client.n.2{
+}
+class inventory.n.2{
+}
+class product.n.1{
+}
+class order.n.7#information.n.4{
+}
+class employee.n.1{
+}
+
+order.n.7 -- client.n.2
+corporation.n.1#client.n.2 --|> client.n.2
+individual.n.1#client.n.2 --|> client.n.2
+corporation.n.1#client.n.2 --* employee.n.1
+product.n.1 --* employee.n.1
+product.n.1 --*  inventory.n.2
+order.n.7#information.n.4 --* product.n.1
+order.n.7#information.n.4 --* order.n.7
+@enduml

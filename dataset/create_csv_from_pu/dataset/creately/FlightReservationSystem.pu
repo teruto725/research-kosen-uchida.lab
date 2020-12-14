@@ -1,0 +1,26 @@
+@startuml
+class customer.n.1{
+}
+class order.n.7{
+}
+class passenger.n.1{
+}
+class order.n.7#flight.n.2{
+}
+class schedule.n.2#flight.n.2{
+}
+class schedule.n.2{
+}
+class flight.n.2{
+}
+class airport.n.1{
+}
+
+customer.n.1 -- order.n.7
+order.n.7 -- passenger.n.1
+order.n.7#flight.n.2 --|> order.n.7
+schedule.n.2#flight.n.2 -- order.n.7#flight.n.2
+schedule.n.2 -- schedule.n.2#flight.n.2
+flight.n.2 -- airport.n.1
+schedule.n.2#flight.n.2 --|> flight.n.2
+@enduml

@@ -1,0 +1,25 @@
+@startuml
+class piece.n.13{
+}
+class square.n.7{
+}
+class dice.n.1{
+
+}
+class goal.n.1#square.n.7{
+}
+class start.n.1#square.n.7{
+}
+class turn.n.3{
+}
+class field.n.1{
+
+}
+square.n.7 --* field.n.1
+turn.n.3 -- field.n.1
+turn.n.3 -- dice.n.1
+piece.n.13 --* square.n.7
+start.n.1#square.n.7 --|> square.n.7
+goal.n.1#square.n.7 --|> square.n.7
+
+@enduml

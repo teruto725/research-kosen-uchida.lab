@@ -1,0 +1,23 @@
+@startuml
+class ticket.n.1{
+}
+class reservation.n.4#function.n.7{
+}
+class agent.n.4{
+}
+class customer.n.1{
+}
+class refund.n.1{
+}
+class booking.n.2#counter.n.1{
+}
+
+ticket.n.1 -- customer.n.1
+refund.n.1 -- customer.n.1
+booking.n.2#counter.n.1 -- customer.n.1
+agent.n.4 -- customer.n.1
+agent.n.4 -- ticket.n.1
+agent.n.4 --|> reservation.n.4#function.n.7
+booking.n.2#counter.n.1 -- ticket.n.1
+@enduml
+ 

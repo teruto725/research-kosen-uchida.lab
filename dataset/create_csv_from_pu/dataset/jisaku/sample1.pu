@@ -1,0 +1,11 @@
+@startuml
+class cat.n.1{
+}
+class animal.n.1{
+}
+class dog.n.1{
+
+}
+cat.n.1 --|> animal.n.1
+dog.n.1 --|> animal.n.1
+@enduml

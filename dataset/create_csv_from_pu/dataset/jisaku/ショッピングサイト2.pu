@@ -1,0 +1,27 @@
+@startuml
+title syopping
+class person.n.1{
+}
+class marketer.n.1{
+}
+class customer.n.1{
+
+}
+class shopping.n.2{
+}
+class item.n.3#shelf.n.1{
+}
+class item.n.3{
+    
+}
+class shopping.n.2#basket.n.1{
+
+}
+customer.n.1 --|> person.n.1
+marketer.n.1 --|> person.n.1
+shopping.n.2 -- person.n.1
+item.n.3#shelf.n.1 --* shopping.n.2 
+shopping.n.2#basket.n.1 --* shopping.n.2
+item.n.3 --* item.n.3#shelf.n.1
+item.n.3 --* shopping.n.2#basket.n.1
+@enduml

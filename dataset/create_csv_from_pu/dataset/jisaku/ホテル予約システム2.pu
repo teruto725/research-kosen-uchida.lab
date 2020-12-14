@@ -1,0 +1,30 @@
+@startuml
+class system.n.1{
+
+}
+class booking.n.2#function.n.2{
+
+}
+class cancellation.n.1#function.n.2{
+
+}
+class database.n.1{
+
+}
+class booking.n.2#data.n.1{
+
+}
+class account.n.3#data.n.1{
+
+}
+class hotel.n.1#data.n.1{
+
+}
+
+booking.n.2#data.n.1 --* database.n.1
+account.n.3#data.n.1 --* database.n.1
+hotel.n.1#data.n.1 --* database.n.1
+database.n.1 -- system.n.1
+booking.n.2#function.n.2 --|> system.n.1
+cancellation.n.1#function.n.2 --|> system.n.1
+@enduml

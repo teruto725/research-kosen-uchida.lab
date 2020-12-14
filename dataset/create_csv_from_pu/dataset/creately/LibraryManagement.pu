@@ -1,0 +1,27 @@
+@startuml
+class librarian.n.1{
+}
+class book.n.1{
+}
+class reference.n.2#book.n.1{
+}
+class general.n.3#book.n.1{
+}
+class user.n.1{
+}
+class student.n.1{
+}
+class faculty.n.2{
+}
+class publisher.n.1{
+}
+
+librarian.n.1 -- book.n.1
+reference.n.2#book.n.1 --|> book.n.1
+general.n.3#book.n.1 --|> book.n.1
+book.n.1 -- user.n.1
+user.n.1 -- librarian.n.1
+student.n.1 --|> user.n.1
+faculty.n.2 --|> user.n.1
+librarian.n.1 -- publisher.n.1
+@enduml

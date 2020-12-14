@@ -1,0 +1,23 @@
+@startuml
+class hand.n.6#piece.n.13{
+}
+class gameboard.n.1{
+
+}
+class turn.n.3{
+
+}
+class record.n.1{
+    
+}
+class screen.n.3{
+}
+class piece.n.13{
+
+}
+screen.n.3 -- record.n.1
+turn.n.3 --* record.n.1
+gameboard.n.1 --* turn.n.3
+hand.n.6#piece.n.13 --* turn.n.3
+piece.n.13 -- record.n.1
+@enduml

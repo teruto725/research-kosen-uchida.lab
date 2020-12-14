@@ -1,0 +1,29 @@
+@startuml
+class order.n.7{
+}
+class customer.n.1{
+}
+class product.n.1{
+}
+class administrator.n.1{
+}
+class seller.n.1{
+}
+class credit_card.n.1{
+}
+class company.n.1{
+}
+class cart.n.2{
+}
+
+administrator.n.1 -- customer.n.1
+cart.n.2 -- customer.n.1
+cart.n.2 -- order.n.7
+customer.n.1 -- order.n.7
+product.n.1 --* cart.n.2
+seller.n.1 -- administrator.n.1
+company.n.1 --  seller.n.1
+company.n.1 -- order.n.7
+order.n.7 -- credit_card.n.1
+seller.n.1 -- product.n.1
+@enduml

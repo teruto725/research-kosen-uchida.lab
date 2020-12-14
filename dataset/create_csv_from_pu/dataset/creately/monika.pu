@@ -1,0 +1,26 @@
+@startuml
+class order.n.7{
+}
+class customer.n.1{
+}
+class product.n.1{
+}
+class account.n.7{
+}
+class administrator.n.1{
+}
+class web.n.5#user.n.1{
+}
+class payment.n.1{
+}
+
+
+administrator.n.1 --|> account.n.7
+web.n.5#user.n.1 --|> account.n.7
+customer.n.1 -- order.n.7
+product.n.1 --* order.n.7
+administrator.n.1 -- order.n.7
+payment.n.1 -- order.n.7
+web.n.5#user.n.1 -- payment.n.1
+account.n.7 -- order.n.7
+@enduml

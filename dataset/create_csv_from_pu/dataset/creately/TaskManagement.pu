@@ -1,0 +1,24 @@
+@startuml
+class user.n.1{
+}
+class administrator.n.1{
+}
+class team.n.1#member.n.1{
+}
+class team.n.1#leader.n.1{
+}
+class task.n.1{
+}
+class task.n.1#system.n.1{
+}
+class project.n.1{
+}
+
+
+administrator.n.1 --|> user.n.1
+team.n.1#member.n.1 --|> user.n.1
+team.n.1#leader.n.1 --|> team.n.1#member.n.1
+task.n.1#system.n.1 -- team.n.1#member.n.1
+task.n.1#system.n.1 -- project.n.1
+task.n.1#system.n.1 -- task.n.1
+@enduml

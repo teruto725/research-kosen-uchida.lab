@@ -1,0 +1,30 @@
+@startuml
+class screen.n.3{
+
+}
+class hotel.n.1{
+
+}
+class room.n.1{
+
+}
+class reservation.n.1{
+
+}
+class account.n.3{
+
+}
+class booking.n.2{
+
+}
+class cancellation.n.1{
+
+}
+
+account.n.3 --* screen.n.3
+hotel.n.1 --* screen.n.3
+reservation.n.1 --|> screen.n.3
+cancellation.n.1 --|> screen.n.3
+room.n.1 --* hotel.n.1  
+booking.n.2 --* account.n.3
+@enduml
