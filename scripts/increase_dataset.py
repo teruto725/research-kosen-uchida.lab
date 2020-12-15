@@ -11,18 +11,24 @@ def replace_to_k(df):
 
 
 # 向きを変えたものを出力する
-def add_reverses(df):
-    def reverse_direction(row):
+def add_reverses(df,columns):
+    def reverse_direction(row,columns):
         copy = row.copy()  # copy for temp
         copy.at["class_a"] = row.at["class_b"]
         copy.at["class_b"] = row.at["class_a"]
         rowtype = row.at["relation"]
         copy.at["relation"] = rowtype.replace("1", "2") if "1" in rowtype else rowtype.replace("2", "1")
+
+        #ans系に対して反転しょり
+        for c in columns:
+            rowtype = row.at[c]
+            copy.at[c] = rowtype.replace("1", "2") if "1" in rowtype else rowtype.replace("2", "1")
+
         return copy
 
     for index, row in df.iterrows():
         if "1" in row.at["relation"] or "2" in row.at["relation"]:
-            rev = reverse_direction(row)
+            rev = reverse_direction(row,columns)
             df = df.append(rev)
     #print(df)
     df = df.sort_values("title").reset_index(drop=True)
@@ -110,10 +116,10 @@ def add_non_label(df):
     df = pd.concat([df, none_rows], axis=0)
     return df
 
-def execute(df):
+def execute(df,ans_columns):
     #df = pd.read_csv("0.dataset_remove_conflict.csv")
     df = replace_to_k(df)
-    df = add_reverses(df)
+    df = add_reverses(df,ans_columns)
     #df = del_confilct(df)
     #df = add_non_label(df)
     #df.to_csv("1.increased_data_conflict.csv", index=False)
