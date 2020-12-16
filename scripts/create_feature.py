@@ -1,11 +1,11 @@
 """
-incleaseddataから特徴量を作成するファイル。
-前提として
-- wordnet.csv
+特徴量を作成するファイル。
+前提として/pretraining_dataに以下のファイルが存在する必要あり
+
 - mcs_data.pickle
 - enwiki.pkl
 - lexvec.vectors
-が必要
+
 
 実行時間かかるから注意
 
@@ -55,7 +55,7 @@ def setup(wordnet_df):
     # df作成
 
 
-#wordnet.csvを受け取ってpretraining_data内に2.mcs_memo.pickleを保存する
+#wordnet.csv,dfを受け取って特徴量をつけて返す
 def execute(df,wordnet_df):
     setup(wordnet_df)
     feature_names = ["sim_by_mcg",
